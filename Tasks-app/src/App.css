@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 50px 0;
+}
+
+.task-app {
+  width: 450px;
+  background: rgba(30, 25, 50, 0.85);
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+.task-app h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #f5c7ff;
+  letter-spacing: 1px;
+}
+
+.add-task {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.add-task input {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.add-task button {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  background: #a76fd1;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-task button:hover {
+  background: #c287f2;
+}
+
+.tasks-list {
+  list-style: none;
+}
+
+.tasks-list li {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px 15px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tasks-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.task-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.task-main span {
+  flex: 1;
+  cursor: pointer;
+}
+
+.task-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.task-buttons button {
+  padding: 6px 12px;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.task-buttons button:first-child {
+  background: #393a76; /* Show Details */
+}
+
+.task-buttons button:first-child:hover {
+  background: #a68cc1;
+}
+
+.task-buttons button:last-child {
+  background: #ff5c5c; /* Delete */
+}
+
+.task-buttons button:last-child:hover {
+  background: #ff8282;
+}
+
+.task-description {
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tasks-list li.completed span {
+  text-decoration: line-through;
+  color: #b0b0b0;
+}
